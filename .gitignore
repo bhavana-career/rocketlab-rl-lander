@@ -31,11 +31,13 @@ yarn-error.log*
 *.pem
 *.key
 
-# Model binary weights (prevent committing 150KB+ binary artifacts into Git history)
-models/*.zip
-*.pth
-*.pt
-*.pkl
+# Model binary weights: ignore large/ad-hoc weight files, but track the 3 specific ~150KB project checkpoints
+models/*.pt
+models/*.pth
+models/*.pkl
+!models/ppo_lunar_lander.zip
+!models/ppo_lunar_lander_hover.zip
+!models/ppo_lunar_lander_corrected.zip
 
 # Editor & OS artifacts
 .DS_Store
