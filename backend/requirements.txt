@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# Pinned to the versions the models were trained with
+# (recorded in system_info.txt inside each model zip).
+stable-baselines3==2.9.0
+gymnasium[box2d]==1.3.0
+torch==2.11.0
+numpy>=1.26

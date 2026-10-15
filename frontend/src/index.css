@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem; /* keeps section titles clear of the fixed header */
+  }
+  body {
+    margin: 0;
+    overscroll-behavior: none;
+  }
+  /* DESIGN.md: all numerical displays use tabular figures */
+  .font-code-sm,
+  .font-code-lg,
+  .font-label-caps {
+    font-variant-numeric: tabular-nums;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
